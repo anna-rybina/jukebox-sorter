@@ -1,18 +1,21 @@
 package com.github.annarybina;
 
-import java.util.Collections;
 import java.util.List;
 
-public class Jukebox4 {
+public class Jukebox5 {
     public static void main(String[] args) {
-        new Jukebox4().go();
+        new Jukebox5().go();
     }
 
     public void go() {
         List<SongV3> songList = MockSongs.getSongsV3();
         System.out.println(songList);
 
-        Collections.sort(songList);
+//        Collections.sort(songList);
+//        System.out.println(songList);
+
+        TitleCompare titleCompare = new TitleCompare();
+        songList.sort(titleCompare);
         System.out.println(songList);
 
         ArtistCompare artistCompare = new ArtistCompare();
