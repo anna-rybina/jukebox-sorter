@@ -10,7 +10,7 @@ public class Jukebox8 {
     }
 
     public void go() {
-        List<SongV3> songList = MockSongs.getSongsV3();
+        List<SongV4> songList = MockSongs.getSongsV3();
         System.out.println(songList);
 
         songList.sort((one, two) -> one.getTitle().compareTo(two.getTitle()));
@@ -27,7 +27,7 @@ public class Jukebox8 {
 
         System.out.println("__________________________________");
 
-        Set<SongV3> songSet = new HashSet<>(songList);
+        Set<SongV4> songSet = new HashSet<>(songList);
         System.out.println(songSet);
 
     }

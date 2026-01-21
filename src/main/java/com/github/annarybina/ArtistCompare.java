@@ -2,9 +2,9 @@
 //
 //import java.util.Comparator;
 //
-//public class ArtistCompare implements Comparator<SongV3> {
+//public class ArtistCompare implements Comparator<SongV4> {
 //    @Override
-//    public int compare(SongV3 one, SongV3 two) {
+//    public int compare(SongV4 one, SongV4 two) {
 //        return one.getArtist().compareTo(two.getArtist());
 //    }
 //}

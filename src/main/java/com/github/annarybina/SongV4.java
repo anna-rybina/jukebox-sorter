@@ -1,17 +1,26 @@
 package com.github.annarybina;
 
-public class SongV3 implements Comparable<SongV3> {
-    // Поля объявлены верно
+public class SongV4 implements Comparable<SongV4> {
     private final String title;
     private final String artist;
     private final int bpm;
 
-    public int compareTo(SongV3 s) {
+    public boolean equals(Object aSong) {
+        SongV4 other = (SongV4) aSong;
+        return title.equals(other.getTitle());
+    }
+
+    @Override
+    public int hashCode() {
+        return title.hashCode();
+    }
+
+    public int compareTo(SongV4 s) {
         return title.compareTo(s.getTitle());
     }
 
     // Конструктор
-    public SongV3(String title, String artist, int bpm) {
+    public SongV4(String title, String artist, int bpm) {
         this.title = title;
         this.artist = artist;
         this.bpm = bpm;
