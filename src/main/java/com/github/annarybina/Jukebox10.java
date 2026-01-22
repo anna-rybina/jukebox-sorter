@@ -3,10 +3,11 @@ package com.github.annarybina;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
+import java.util.TreeSet;
 
-public class Jukebox8 {
+public class Jukebox10 {
     public static void main(String[] args) {
-        new Jukebox8().go();
+        new Jukebox10().go();
     }
 
     public void go() {
@@ -27,8 +28,12 @@ public class Jukebox8 {
 
         System.out.println("__________________________________");
 
-        Set<SongV4> songSet = new HashSet<>(songList);
+        Set<SongV4> songSet = new TreeSet<>(songList);
         System.out.println(songSet);
+
+        Set<SongV4> songSet2 = new TreeSet<>((one, two) -> Integer.compare(one.getBpm(), two.getBpm()));
+        songSet2.addAll(songList);
+        System.out.println(songSet2);
 
     }
 }
